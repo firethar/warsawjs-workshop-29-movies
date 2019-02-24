@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { FilmsListComponent } from './films/films-list/films-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FilmsListComponent
   ],
   imports: [
     BrowserModule,
