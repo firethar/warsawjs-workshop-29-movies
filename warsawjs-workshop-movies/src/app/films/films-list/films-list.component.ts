@@ -27,6 +27,9 @@ export class FilmsListComponent implements OnInit {
     );
   }
 
+  public removeFilm(filmId: number) {
+    this.filmsService.deleteFilm(filmId).subscribe();
+  }
 
   public toggleFilmDetails(): void {
     this.filmsDetailIsVisible = !this.filmsDetailIsVisible;

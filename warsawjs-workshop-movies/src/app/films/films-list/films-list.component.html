@@ -10,7 +10,8 @@
         <mat-card-subtitle></mat-card-subtitle>
       </mat-card-content>
       <mat-card-actions>
-        <a mat-icon-button (click)="toggleFilmDetails()">Show film detail</a>
+        <button mat-icon-button (click)="removeFilm(film.id)">Remove film</button><br>
+        <button mat-icon-button (click)="toggleFilmDetails()">Show film detail</button>
       </mat-card-actions>
       <app-film-details *ngIf="filmsDetailIsVisible" [film]="film"></app-film-details>
     </mat-card>
