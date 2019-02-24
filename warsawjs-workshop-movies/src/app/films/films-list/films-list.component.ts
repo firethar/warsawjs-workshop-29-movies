@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as data from 'db.json';
+import { Film } from '../film';
 
 @Component({
   selector: 'app-films-list',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./films-list.component.scss']
 })
 export class FilmsListComponent implements OnInit {
+  public name = 'Films list';
+  public films: Film[];
+  public filmsDetailIsVisible = false;
 
-  constructor() { }
+  constructor() {
+    this.films =  data.default.movies;
+  }
 
   ngOnInit() {
   }
 
+
+  public toggleFilmDetails(): void {
+    this.filmsDetailIsVisible = !this.filmsDetailIsVisible;
+  }
 }
