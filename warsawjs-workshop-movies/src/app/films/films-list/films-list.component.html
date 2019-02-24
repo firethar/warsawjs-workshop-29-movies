@@ -1,7 +1,10 @@
 <div class="row">
   <section class="film-list container" *ngIf="films" >
     <h1>{{name}}</h1>
-    <mat-card class="film-card" *ngFor="let film of films; let i = index">
+    <mat-form-field class="ml-2">
+      <input matInput placeholder="Filter by" [(ngModel)]="query">
+    </mat-form-field>
+    <mat-card class="film-card" *ngFor="let film of films | search:'title,genre':query ; let i = index">
       <mat-card-title>{{film.title}}</mat-card-title>
       <mat-card-content>
         <img
