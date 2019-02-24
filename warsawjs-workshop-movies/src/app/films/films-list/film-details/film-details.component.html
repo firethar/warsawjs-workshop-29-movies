@@ -1,3 +1,7 @@
-<p>
-  film-details works!
-</p>
+<div *ngIf="film" class="col-md-10">
+  Title: {{film.title}} <br>
+  Genre: {{film.genre}} <br>
+  Number In Stock: {{film.numberInStock}} <br>
+  Daily Rental Rate: {{film.dailyRentalRate}} <br>
+  <img src="{{film.imageUrl}}"> <br>
+</div>
