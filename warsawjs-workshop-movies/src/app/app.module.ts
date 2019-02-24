@@ -14,6 +14,8 @@ import { FilmDetailsComponent } from './films/films-list/film-details/film-detai
 import { NewFilmComponent } from './films/new-film/new-film.component';
 import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { EditFilmComponent } from './films/edit-film/edit-film.component';
+import { SearchPipe } from './shared/search.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
     FilmDetailsComponent,
     NewFilmComponent,
     NavBarComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    EditFilmComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

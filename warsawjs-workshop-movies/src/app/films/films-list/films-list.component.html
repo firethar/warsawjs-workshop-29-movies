@@ -10,6 +10,7 @@
         <mat-card-subtitle></mat-card-subtitle>
       </mat-card-content>
       <mat-card-actions>
+        <button mat-icon-button routerLink="/edit-film/{{film.id}}">Edit film</button><br>
         <button mat-icon-button (click)="removeFilm(film.id)">Remove film</button><br>
         <button mat-icon-button (click)="toggleFilmDetails()">Show film detail</button>
       </mat-card-actions>

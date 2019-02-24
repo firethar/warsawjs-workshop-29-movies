@@ -1,20 +1,20 @@
 {
   "movies": [
     {
-      "id": 2,
       "title": "Die Hard",
       "genre": "Action",
       "numberInStock": 5,
       "dailyRentalRate": 2.5,
-      "imageUrl": "http://www.pngmart.com/files/5/Movie-PNG-Transparent-Image.png"
+      "imageUrl": "http://www.pngmart.com/files/5/Movie-PNG-Transparent-Image.png",
+      "id": 2
     },
     {
-      "id": 3,
-      "title": "Get Out",
+      "title": "Get Out of here",
       "genre": "Thriller",
       "numberInStock": 8,
       "dailyRentalRate": 3.5,
-      "imageUrl": "http://www.pngmart.com/files/5/Movie-PNG-Transparent-Image.png"
+      "imageUrl": "http://www.pngmart.com/files/5/Movie-PNG-Transparent-Image.png",
+      "id": 3
     },
     {
       "id": 4,

@@ -15,10 +15,25 @@ export class FilmsService {
     return this.httpClient.get<Film[]>(this.moviesUrl);
   }
 
+  getFilmById(filmId): Observable<Film> {
+    return this.httpClient.get<Film>(this.moviesUrl+'/'+filmId);
+  }
+
   addFilm(film: Film) {
     this.httpClient.post(this.moviesUrl, film).subscribe(
       data  => {
         console.log('POST Request is successful ', data);
+      },
+      error  => {
+        console.log('Error', error);
+      }
+    );
+  }
+
+  updateFilm(film: Film, filmId: number) {
+    this.httpClient.put(this.moviesUrl + '/' + filmId, film).subscribe(
+      data  => {
+        console.log('Request is successful ', data);
       },
       error  => {
         console.log('Error', error);
