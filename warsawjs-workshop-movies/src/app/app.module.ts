@@ -8,19 +8,22 @@ import { MatIconModule } from '@angular/material/icon';
 import { FilmsListComponent } from './films/films-list/films-list.component';
 import { MatCardModule } from '@angular/material/card';
 import { FilmDetailsComponent } from './films/films-list/film-details/film-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilmsListComponent,
-    FilmDetailsComponent
+    FilmDetailsComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

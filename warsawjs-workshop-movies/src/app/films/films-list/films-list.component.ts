@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as data from 'db.json';
 import { Film } from '../film';
+import { FilmsService } from 'src/app/core/services/films.service';
 
 @Component({
   selector: 'app-films-list',
@@ -11,12 +12,19 @@ export class FilmsListComponent implements OnInit {
   public name = 'Films list';
   public films: Film[];
   public filmsDetailIsVisible = false;
+  public errorMessages = '';
 
-  constructor() {
+  constructor(private filmsService: FilmsService) {
     this.films =  data.default.movies;
   }
 
   ngOnInit() {
+    this.filmsService.getFilms().subscribe(
+      films => {
+        this.films = films;
+      },
+      error => this.errorMessages = error
+    );
   }
 
 
